@@ -21,8 +21,7 @@ class Login extends Component {
     // here we need to send the username and password to the server.. so that passport can ddo stuff with that. 
     handleFormSubmit = event => {
         event.preventDefault();
-        alert(`Username: ${this.state.username}\nPassword: ${this.state.password}`);
-        this.setState({ username: "", password: "" });
+        //make post rquest here to /login
   };
 
   render() {
