@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import GithubSignInButton from "../GithubSignInButton/githubSignInButton";
 
 class Login extends Component {
     // Setting the initial values of this.state.username and this.state.password
@@ -42,6 +43,7 @@ class Login extends Component {
           onChange={this.handleInputChange}
         />
         <button onClick={this.handleFormSubmit}>Submit</button>
+        <GithubSignInButton />
       </form>
     );
   }
