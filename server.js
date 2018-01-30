@@ -9,9 +9,10 @@ const expressValidator = require('express-validator');
 const flash = require('connect-flash');
 const session = require('express-session');
 const LocalStrategy = require('passport-local').Strategy;
+const bodyParser = require('body-parser');
 
 //connect to the db
-mongoose.connect('mongod://localhost/CodeNector');
+mongoose.connect('mongodb://localhost/CodeNector');
 const db = mongoose.connection;
 
 
@@ -74,36 +75,27 @@ app.use(function (req, res, next){
 //     res.redirect('/users/' + req.user.username);
 //   });
 
-app.get('/register'. function(req, res) {
-  // need to route to the register page. 
-  // display a registration form. 
-});
-
-app.get('/login'. function(req, res) {
-  // need to route to the login page. 
-  // when the user navigates here we need to display main login page.
-});
-
 app.post('/register', function(req, res) {
   // handle user information when they sign up
-
+  console.log(req.body);
   // validation example. 
-  var name = req.body.name; 
-  req.checkBody('name', 'Name is required').notEmpty();
-  var errors = req.validationErrors();
-  if(errors){
-    console.log('There was a validation error');
-  } else{
-      console.log("no errors");
-    }
-  }
+  // var name = req.body.name; 
+  
+  // req.checkBody('name', 'Name is required').notEmpty();
+  // var errors = req.validationErrors();
+  // if(errors){
+  //   console.log('There was a validation error');
+  // } else{
+  //     console.log("no errors");
+  //   }
 });
 
-app.post('/login'. function(req, res) {
+app.post('/login', function(req, res) {
   // handle the user name and pw when they try to login 
   // check for username
   // check if pw is correct 
   // then direct user to main landing page. 
+  console.log("posted to login with " + req.body);
 });
 
 // Send every request to the React app

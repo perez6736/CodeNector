@@ -18,18 +18,20 @@
     "nodemon": "^1.11.0"
   },
   "dependencies": {
-    "bcryptjs": "*",
-    "body-parser": "*",
-    "connect-flash": "*",
-    "cookie-parser": "1.4.1",
+    "axios": "^0.16.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.1",
     "express": "^4.15.4",
-    "express-messages": "*",
+    "express-messages": "^1.0.1",
     "express-session": "^1.15.6",
-    "express-validator": "*",
+    "express-validator": "^4.3.0",
     "mongoose": "^5.0.1",
     "passport": "^0.4.0",
-    "passport-http": "*",
+    "passport-http": "^0.3.0",
     "passport-local": "^1.0.0",
-    "passport-local-mongoose": "^4.4.0"
+    "passport-local-mongoose": "^4.4.0",
+    "react-router-dom": "^4.2.2"
   }
 }
